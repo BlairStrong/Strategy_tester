@@ -6,9 +6,9 @@ moving average crossover and rebalancing strategy Backtester and automater
 
 2. Project Description
 
-***This project is still in development. This has been amde public to showcase my development with a few months of programming.***
+***This project is still in development. This has been made public to showcase my development with 6 months of programming.***
 
-This project is a trading strategy backtester that will develop, if profitable, into a automated trading script,
+This project is a trading strategy backtester that will develop, if profitable, into a automated trading script.
 
 This project is split into 3 stages
 stage1: This backtester looks to establish if a given trend following trading system is profitable with historical data sourced from the binance API.
