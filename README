@@ -1,0 +1,47 @@
+
+1. Project's Title
+
+moving average crossover and rebalancing strategy Backtester and automater
+
+
+2. Project Description
+
+***This project is still in development. This has been amde public to showcase my development with a few months of programming.***
+
+This project is a trading strategy backtester that will develop, if profitable, into a automated trading script,
+
+This project is split into 3 stages
+stage1: This backtester looks to establish if a given trend following trading system is profitable with historical data sourced from the binance API.
+
+The strategy is simple:
+start with a portfolio of 5 high conviction assets.
+for a user defined periodicity (hourly, daily etc), the "trend direction" is checked. 
+
+If the trend is up (ie average price over a short time frame is higher than average price over a longer term time frame), and there is not current position in that asset, buy some of that asset.
+if the trend is up and there is a current position, remain in position. 
+	if the position size is more than 1/5th of the total capital allocation, reduce the size of the position to make it 1/5th of total capital.
+	if the position size is less than 1/5th of the total capital allocation, increase the size of the position to make it 1/5th of total capital.
+if the trend is down (ie average price over a short time frame is lower than average price over a longer term time frame) and there is no current position, remain out of position
+if the trend is down and there is a current position, fully exit that position.
+
+
+Stage2: STILL TO BE BUILT 
+if the user is content their user defined conditions are profitable, stage 2 will be to run the script and highlight which assets need to be bought or sold and how much of each.
+
+stage3: using the binance API, stage 3 will be to automatically place the trade on the users behalf according to the user requirements.
+
+4. How to Install and Run the Project
+
+to install and run this projec, please open up the terminal and path into your working directory.
+type: pip3 install -r requirements.txt
+or install:
+pandas
+xlsxwriter
+
+update the backtest_config.py file with your sma duration for establishing the trend. 50 and 100 are EXAMPLES of what you can use. this will not produce a profitable strategy.
+
+please issue a startdate that is a monday.
+please input your initial capital in usd.
+please select your crypto assets using the symbol_list list. please use the form BASEQUOTE ie BTCETH, BTCUSDT. 
+
+
